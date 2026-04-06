@@ -144,6 +144,135 @@ Z presetem 200:
 
 <img width="1227" height="480" alt="obraz" src="https://github.com/user-attachments/assets/1cebe289-6fc2-4316-a3fd-bb4665a467e7" />
 
+Teraz komenda ktora pokazuje absolutnie wszystkie mozliwosci naszej kamerki :D
+
+```
+v4l2-ctl -d /dev/video10 --all
+
+```
+
+Lista wszystkich dostepnych "{pokretel"{ (kontrolek)
+
+```
+v4l2-ctl -d /dev/video10 -L
+```
+
+```
+brightness (int)    : min=-64 max=64 step=1 default=10 value=40
+                       contrast (int)    : min=0 max=100 step=1 default=50 value=70
+                     saturation (int)    : min=0 max=100 step=1 default=64 value=60
+                            hue (int)    : min=-180 max=180 step=1 default=-3 value=-3
+ white_balance_temperature_auto (bool)   : default=1 value=1
+                          gamma (int)    : min=100 max=500 step=1 default=300 value=300
+                           gain (int)    : min=0 max=128 step=1 default=64 value=1
+           power_line_frequency (menu)   : min=0 max=2 default=1 value=1
+                                0: Disabled
+                                1: 50 Hz
+                                2: 60 Hz
+      white_balance_temperature (int)    : min=2800 max=6500 step=10 default=4600 value=4600 flags=inactive
+                      sharpness (int)    : min=0 max=100 step=1 default=50 value=100
+         backlight_compensation (int)    : min=0 max=2 step=1 default=0 value=0
+                  exposure_auto (menu)   : min=0 max=3 default=3 value=3
+                                1: Manual Mode
+                                3: Aperture Priority Mode
+              exposure_absolute (int)    : min=1 max=10000 step=1 default=166 value=166 flags=inactive
+         exposure_auto_priority (bool)   : default=0 value=1
+                   pan_absolute (int)    : min=-57600 max=57600 step=3600 default=0 value=3600
+                  tilt_absolute (int)    : min=-43200 max=43200 step=3600 default=0 value=3600
+                 focus_absolute (int)    : min=0 max=800 step=1 default=120 value=200
+                     focus_auto (bool)   : default=1 value=0
+                  zoom_absolute (int)    : min=0 max=3 step=1 default=0 value=3
+root@Rockchip:/userdata/app/gk# 
+```
+
+```
+
+min=-64 max=64 step=1 default=10 value=40
+v4l2-ctl -d /dev/video10 --set-ctrl=brightness=0
+
+contrast (int)    : min=0 max=100 step=1 default=50 value=70
+v4l2-ctl -d /dev/video10 --set-ctrl=contrast=50
+
+saturation (int)    : min=0 max=100 step=1 default=64 value=60
+v4l2-ctl -d /dev/video10 --set-ctrl=saturation=64
+
+hue (int)    : min=-180 max=180 step=1 default=-3 value=-3
+v4l2-ctl -d /dev/video10 --set-ctrl=hue=-3
+
+white_balance_temperature_auto (bool)   : default=1 value=1
+v4l2-ctl -d /dev/video10 --set-ctrl=white_balance_temperature_auto=1
+
+gamma (int)    : min=100 max=500 step=1 default=300 value=300
+v4l2-ctl -d /dev/video10 --set-ctrl=gamma=200
+
+
+gain (int)    : min=0 max=128 step=1 default=64 value=1
+v4l2-ctl -d /dev/video10 --set-ctrl=gain=64
+
+
+power_line_frequency (menu)   : min=0 max=2 default=1 value=1
+0: Disabled
+1: 50 Hz
+2: 60 Hz
+v4l2-ctl -d /dev/video10 --set-ctrl=power_line_frequency=0
+
+white_balance_temperature (int)    : min=2800 max=6500 step=10 default=4600 value=4600 flags=inactive
+v4l2-ctl -d /dev/video10 --set-ctrl=white_balance_temperature=2800
+
+sharpness (int)    : min=0 max=100 step=1 default=50 value=100
+v4l2-ctl -d /dev/video10 --set-ctrl=sharpness=50
+
+backlight_compensation (int)    : min=0 max=2 step=1 default=0 value=0
+v4l2-ctl -d /dev/video10 --set-ctrl=backlight_compensation=0
+
+exposure_auto (menu)   : min=0 max=3 default=3 value=3
+1: Manual Mode
+3: Aperture Priority Mode
+v4l2-ctl -d /dev/video10 --set-ctrl=exposure_auto=3
+
+
+exposure_absolute (int)    : min=1 max=10000 step=1 default=166 value=166 flags=inactive
+v4l2-ctl -d /dev/video10 --set-ctrl=exposure_absolute=166&flags=inactive
+v4l2-ctl -d /dev/video10 --set-ctrl=exposure_auto=1
+
+
+
+exposure_auto_priority (bool)   : default=0 value=1
+v4l2-ctl -d /dev/video10 --set-ctrl=exposure_auto_priority=0
+
+pan_absolute (int)    : min=-57600 max=57600 step=3600 default=0 value=3600
+v4l2-ctl -d /dev/video10 --set-ctrl=pan_absolute=3600
+
+
+
+tilt_absolute (int)    : min=-43200 max=43200 step=3600 default=0 value=3600
+v4l2-ctl -d /dev/video10 --set-ctrl=tilt_absolute=3600
+
+focus_absolute (int)    : min=0 max=800 step=1 default=120 value=200
+v4l2-ctl -d /dev/video10 --set-ctrl=focus_absolute=200
+
+focus_auto (bool)   : default=1 value=0
+v4l2-ctl -d /dev/video10 --set-ctrl=focus_auto=200
+
+zoom_absolute (int)    : min=0 max=3 step=1 default=0 value=3
+v4l2-ctl -d /dev/video10 --set-ctrl=zoom_absolute=3
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
