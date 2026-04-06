@@ -124,6 +124,27 @@ v4l2-ctl -d /dev/video10 --set-ctrl=focus_auto=1
 
 Teraz wisienka na torcie. Ustawiamy ostrosc kamerki! Cos pieknego. Nie musimy nic fizycznie niszczyc obiektywu. To jest mega plus.
 
+Komenda to:
+
+Zakres od 0 do 800.
+
+```
+v4l2-ctl -d /dev/video10 --set-ctrl=focus_absolute=200
+```
+
+Z presetem 800 obraz wyglada nastepujaco:
+
+<img width="1274" height="469" alt="obraz" src="https://github.com/user-attachments/assets/acea3f4e-617d-46b9-a746-ead6d156fe46" />
+
+Z presetem 400 obraz wyglada nastepujaco:
+
+<img width="1302" height="409" alt="obraz" src="https://github.com/user-attachments/assets/6cc9b83d-bfb8-49c3-9c2e-7d130f451607" />
+
+Z presetem 200:
+
+<img width="1227" height="480" alt="obraz" src="https://github.com/user-attachments/assets/1cebe289-6fc2-4316-a3fd-bb4665a467e7" />
+
+
 
 
 
