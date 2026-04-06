@@ -70,6 +70,116 @@ Otrzymamy taki widok: @- to sa pliki /- to sa foldery
 
 <img width="680" height="202" alt="obraz" src="https://github.com/user-attachments/assets/3799401d-54e2-4dbb-a828-1c1296597cec" />
 
+Teraz wykonajmy inna operacje aby przejsc do ktoregos katalogo. Jak juz wiemy, komenda ls / z roota pokazujemy foldery i pliki.
+
+Sprobujmy przejsc teraz do folderu useremain
+
+```
+cd /useremain
+```
+
+Widok:
+
+<img width="680" height="381" alt="obraz" src="https://github.com/user-attachments/assets/69830020-d710-4769-bba4-b3952ead9c08" />
+
+Komenda ls -F wylistujemy foldery i pliki.
+
+Aby wrucic do poprzedniego folderu wykonujemy:
+
+```
+cd ..
+```
+
+Skoro mamy juz podstawy ogarniete to teraz pobawmy sie bardziej. Sprubuje wyszukac wszystkie urzadzenia ktore mam podpiete pod USB.
+
+Teraz bede korzystal z terminala na PC czyli google chrome z wtyczka SSH. Bedzie latwiej to ogarniac. Wspomne o bardzo waznej rzeczy.
+
+Bede sie wspomagal AI :) Nie uwazam sie za jakiegos GURU linuxowego wiec w tym przypadku bardzo mi to ulatwi prace z terminalem.
+
+Zaczynamy :)
+
+Na poczatek polacze sie z drukarka przez strone www tak aby miec dostep do kamerki. Wyglada to tak:
+
+<img width="1801" height="604" alt="obraz" src="https://github.com/user-attachments/assets/0ee0d27c-2a62-4749-9c30-b90fff886ae9" />
+
+Z poziomu tego interfejsu praktycznie nic nie zrobimy z nasza kamerka. Opcji jest jak na lekarstwo.
+
+<img width="957" height="664" alt="obraz" src="https://github.com/user-attachments/assets/575dbef6-1021-4b92-a5f9-4e2d69c0dfe1" />
+
+Zaczniemy z grubej rury. Kamerka posiada AF i jak ktos to mi pisal nie nadaje sie do drukarki 3D. BLAD! To nie jest prawda.
+
+Zrobimy tak,ze wylaczymy AF i ustawimy odpowiednia ostrosc - stala ostrosc bez krecenia fizycznie obiektywem kamerki. 
+
+Aby zmienic AF czyli np go wylaczyc wykonujemy taka komende:
+
+```
+v4l2-ctl -d /dev/video10 --set-ctrl=focus_auto=0
+```
+
+Aby wlaczyc AF wpisujemy:
+
+```
+v4l2-ctl -d /dev/video10 --set-ctrl=focus_auto=1
+```
+
+Teraz wisienka na torcie. Ustawiamy ostrosc kamerki! Cos pieknego. Nie musimy nic fizycznie niszczyc obiektywu. To jest mega plus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
